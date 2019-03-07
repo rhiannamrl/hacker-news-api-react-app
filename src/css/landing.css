@@ -67,21 +67,49 @@ ul {
   height: 100%;
 }
 
+/* Navbar */
+.Navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 3% 12px 3%;
+}
+
+.Navbar-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+}
+
+.Navbar-item {
+  color: white;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
 /*Policy Hero */
 
 .Policy-hero {
-  background-image: url('./images/BluePolicy.png');
+  background-image: url('../images/BluePolicy.png');
   background-size: 100%;
+  height: 100%;
   width: 100%;
+  position: relative;
   mix-blend-mode: normal;
   background-blend-mode: multiply;
-  opacity: 0.78;
+}
+
+.Policy-hero-wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
 }
 
 /* Contact Hero */
 .Contact-hero {
-  background-image: url('./images/SignUpImage.png');
+  background-image: url('../images/SignUpImage.png');
   background-size: 100%;
+  position: relative;
   width: 100%;
   mix-blend-mode: normal;
   background-blend-mode: multiply;
@@ -91,7 +119,6 @@ ul {
 .Contact-hero-wrapper {
   margin: 0 auto;
   max-width: 960px;
-  padding: 0 10px;
   width: 100%;
 }
 
@@ -180,6 +207,10 @@ input[type='text'] {
   margin: 0 20px;
 }
 
+.Footer-logo {
+  height: 40px;
+  margin-bottom: 20px;
+}
 /* Desktop */
 
 @media screen and (min-width: 1024px) {
