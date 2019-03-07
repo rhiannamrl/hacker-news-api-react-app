@@ -67,6 +67,26 @@ ul {
   height: 100%;
 }
 
+/* Navbar */
+.Navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 3% 12px 3%;
+}
+
+.Navbar-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+}
+
+.Navbar-item {
+  color: white;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
 /*Policy Hero */
 
 .Policy-hero {
@@ -180,6 +200,10 @@ input[type='text'] {
   margin: 0 20px;
 }
 
+.Footer-logo {
+  height: 40px;
+  margin-bottom: 20px;
+}
 /* Desktop */
 
 @media screen and (min-width: 1024px) {

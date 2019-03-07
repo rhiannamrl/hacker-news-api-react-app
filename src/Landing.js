@@ -5,10 +5,26 @@ export default class Landing extends Component {
   render() {
     return (
       <div>
-        <div className="Nav-bar">
-          <div className="Container">
-            <h1>Navbar</h1>
-          </div>
+        <div>
+          <ul className="NavBar-menu">
+            <div className="NavBar-section">
+              <li className="NavBar-item">
+                <span>Insurance</span>
+                <i class="fas fa-caret-down" />
+              </li>
+              <li className="NavBar-item">Products</li>
+              <li className="NavBar-item">Support</li>
+
+              <li className="NavBar-item">Claims</li>
+            </div>
+            <div className="NavBar-section">
+              <li className="NavBar-item">Download App</li>
+              <li className="NavBar-item">Login</li>
+              <li className="NavBar-item">
+                <button>Sign Up</button>
+              </li>
+            </div>
+          </ul>
         </div>
 
         <div className="Computer-hero">
