@@ -5,6 +5,12 @@ export default class Landing extends Component {
   render() {
     return (
       <div>
+        <div className="Solution">
+          <div className="Container">
+            <h1>Choose the solution that's right for your business</h1>
+          </div>
+        </div>
+
         <div className="Policy-hero">
           <div className="Container">
             <h1>
