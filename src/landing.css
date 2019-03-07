@@ -1,5 +1,142 @@
-/* Footer */
+* {
+  box-sizing: border-box;
+}
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body,
+p,
+input,
+select,
+button {
+  font-family: 'Lato', Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgba(1, 108, 183, 1);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #039be5;
+}
+
+ul {
+  padding: 0;
+}
+
+.Container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.Landing {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*Policy Hero */
+
+.Policy-hero {
+  background-image: url('./images/BluePolicy.png');
+  background-size: 100%;
+  display: flex;
+  mix-blend-mode: normal;
+  opacity: 0.78;
+}
+
+/* Contact Hero */
+.Contact-hero {
+  background-image: url('./images/SignUpImage.png');
+  background-size: 100%;
+  width: 100%;
+  mix-blend-mode: normal;
+  background-blend-mode: multiply;
+  opacity: 0.84;
+}
+
+.Contact-hero-wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.Contact-hero-form {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.Contact-hero-heading {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: normal;
+  margin: 30px auto 10px;
+  text-align: center;
+}
+
+.Contact-form-inputs {
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+input[type='text'] {
+  font-size: 16px;
+  color: #9ba9bb;
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #dadfe9;
+  box-sizing: border-box;
+}
+
+.Contact-form-submit {
+  justify-content: center;
+  width: 75%;
+  background: #ff7043;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Footer */
 .Footer {
   background-color: #fff;
   padding: 40px 0;
