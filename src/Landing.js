@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './landing.css'
+import './css/landing.css'
 
 export default class Landing extends Component {
   render() {
@@ -47,9 +47,12 @@ export default class Landing extends Component {
 
         <div className="Policy-hero">
           <div className="Container">
-            <h1>
-              Our partners come in all shapes and sizes, just like our policies
-            </h1>
+            <div className="Policy-hero-wrapper">
+              <h1>
+                Our partners come in all shapes and sizes, just like our
+                policies
+              </h1>
+            </div>
           </div>
         </div>
 
