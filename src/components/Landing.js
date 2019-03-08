@@ -1,30 +1,39 @@
 import React, { Component } from 'react'
 import '../css/landing.css'
+import SURElogo from '../images/SURElogo.png'
+import SURElogoBlue from '../images/SURElogoBlue.png'
+import AllRights from '../images/AllRights.png'
 
 export default class Landing extends Component {
   render() {
     return (
       <div id="root">
         <div className="Top-blue-hero">
-          <ul className="NavBar-menu">
-            <div className="NavBar-section">
-              <li className="NavBar-item">
-                <span>Insurance</span>
-                <i class="fas fa-caret-down" />
-              </li>
-              <li className="NavBar-item">Products</li>
-              <li className="NavBar-item">Support</li>
-
-              <li className="NavBar-item">Claims</li>
+          <nav>
+            <div>
+              <ul>
+                <li>
+                  <img src={SURElogo} alt={'logo'} />
+                </li>
+                <li>
+                  <span>Insurance</span>
+                  <i class="fas fa-caret-down" />
+                </li>
+                <li>Products</li>
+                <li>Support</li>
+                <li>Claims</li>
+              </ul>
             </div>
-            <div className="NavBar-section">
-              <li className="NavBar-item">Download App</li>
-              <li className="NavBar-item">Login</li>
-              <li className="NavBar-item">
-                <button>Sign Up</button>
-              </li>
+            <div>
+              <ul>
+                <li>Download App</li>
+                <li>Login</li>
+                <li>
+                  <button>Sign Up</button>
+                </li>
+              </ul>
             </div>
-          </ul>
+          </nav>
         </div>
 
         <div className="Computer-hero">
@@ -98,22 +107,27 @@ export default class Landing extends Component {
         <div className="Footer">
           <div className="Container">
             <ul className="Footer-links">
-              <li className="Footer-item">SURE.</li>
-              <li className="Footer-item">Privacy Policy</li>
-              <li className="Footer-item">Terms of Service</li>
-              <li className="Footer-item">Licenses</li>
-              <li className="Footer-item">Products</li>
-              <li className="Footer-item">Support</li>
-              <li className="Footer-item">Contact Us</li>
+              <li>
+                <img src={SURElogoBlue} alt={'logo'} />
+              </li>
+              <li>
+                <img src={AllRights} alt={'logo'} />
+              </li>
+              <li>Privacy Policy</li>
+              <li>Terms of Service</li>
+              <li>Licenses</li>
+              <li>Products</li>
+              <li>Support</li>
+              <li>Contact Us</li>
             </ul>
             <ul className="Footer-social">
-              <li className="Footer-social-item">
+              <li>
                 <i class="fab fa-twitter" />
               </li>
-              <li className="Footer-social-item">
+              <li>
                 <i class="fab fa-facebook-f" />
               </li>
-              <li className="Footer-social-item">
+              <li>
                 <i class="fab fa-instagram" />
               </li>
             </ul>

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  border: 1px solid red;
 }
 
 html,
@@ -61,40 +62,45 @@ ul {
 }
 
 /* Navbar */
-.Navbar-menu {
+nav {
   display: flex;
   justify-content: space-between;
 }
 
-.Navbar-section {
-  flex-direction: row;
-  align-items: center;
+nav ul {
+  display: flex;
+  list-style-type: none;
+  /* flex-direction: row; */
+  /* align-items: center;
   justify-content: flex-start;
-  flex: 1 1 auto;
+  flex: 1 1 auto; */
 }
 
-.Navbar-item {
+nav li {
   color: white;
   padding-bottom: 0;
   padding-top: 0;
+  margin-right: 20px;
 }
 
 .Top-blue-hero {
   background-image: url('../images/BlueBG.png');
-  background-size: 100%;
+  /* background-size: cover; */
+  background-position: top;
   height: 100%;
-  width: 100%;
+  height: 1400px;
+  /* width: 100%; */
+  background-repeat: no-repeat;
 }
 /*Policy Hero */
 
 .Policy-hero {
   background-image: url('../images/BluePolicy.png');
-  background-size: 100%;
+  background-position: top;
   height: 100%;
-  width: 100%;
-  position: relative;
-  mix-blend-mode: normal;
-  background-blend-mode: multiply;
+  height: 1000px;
+  /* width: 100%; */
+  background-repeat: no-repeat;
 }
 
 .Policy-hero-wrapper {
@@ -118,6 +124,9 @@ ul {
   margin: 0 auto;
   max-width: 960px;
   width: 100%;
+  /* background-color: red; */
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .Contact-hero-form {
@@ -144,6 +153,17 @@ ul {
   margin-left: 10px;
   box-sizing: border-box;
   border-radius: 5px;
+  width: 500px;
+  /* background-color: blue; */
+}
+
+.Contact-hero-wrapper form {
+  display: flex;
+  justify-content: center;
+}
+
+.Contact-form-inputs label {
+  width: 100%;
 }
 
 input[type='text'] {
@@ -188,7 +208,7 @@ input[type='text'] {
   padding: 0;
 }
 
-.Footer-item {
+.Footer-links li {
   margin-bottom: 20px;
   text-align: center;
 }
@@ -203,7 +223,7 @@ input[type='text'] {
   width: 100%;
 }
 
-.Footer-social-item {
+.Footer-social li {
   margin: 0 20px;
 }
 
@@ -231,7 +251,7 @@ input[type='text'] {
     margin-right: 20px;
   }
 
-  .Footer-item {
+  .Footer-links li {
     margin: 0 20px 0 0;
     text-align: left;
   }
@@ -241,7 +261,7 @@ input[type='text'] {
     width: auto;
   }
 
-  .Footer-social-item {
+  .Footer-social li {
     margin: 0 20px 0 0;
   }
 }
