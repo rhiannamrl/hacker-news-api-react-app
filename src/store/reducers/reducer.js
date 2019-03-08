@@ -1,29 +1,36 @@
-import axios from 'axios'
+import { actionTypes } from './actions'
 
-export const GET_STORIES = 'GET_STORIES'
-
-export const getCurrentStories = stories => ({
-  type: GET_STORIES,
-  stories
+const getInitialState = () => ({
+  storyIds: [],
+  stories: [],
+  page: 0,
+  isFetching: false,
+  error: ''
 })
 
-export const fetchStories = stories => async dispatch => {
-  try {
-    const { data } = await axios.get(
-      ' https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
-    )
-    dispatch(getCurrentStories(data))
-    return data
-  } catch (err) {
-    console.error(err)
-  }
-}
-
-export const currentStories = (state = [], action) => {
-  switch (action.type) {
-    case GET_STORIES:
-      return action.stories
+export const stories = (state = getInitialState(), { type, payload }) => {
+  switch (type) {
+    case actionTypes.FETCH_STORY_IDS_REQUEST:
+    case actionTypes.FETCH_STORIES_REQUEST:
+      return {
+        ...state,
+        isFetching: true
+      }
+    case actionTypes.FETCH_STORY_IDS_SUCCESS:
+      return {
+        ...state,
+        ...payload
+      }
+    case actionTypes.FETCH_STORIES_SUCCESS:
+      return {
+        ...state,
+        stories: [...state.stories, ...payload.stories],
+        page: state.page + 1,
+        isFetching: false
+      }
     default:
       return state
   }
 }
+
+export default stories

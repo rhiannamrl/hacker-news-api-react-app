@@ -1,25 +1,58 @@
-import ApiService from './Api'
+import axios from 'axios'
 
-const JSON_QUERY = '.json?print=pretty'
-const BASE_URL = 'https://hacker-news.firebaseio.com/v0/'
-const client = new ApiService({ baseURL: BASE_URL })
-
-const hackerNewsApi = {}
-const PAGE_LIMIT = 20
-
-const getPageSlice = (limit, page = 0) => ({
-  begin: page * limit,
-  end: (page + 1) * limit
-})
-const getPageValues = ({ begin, end, items }) => items.slice(begin, end)
-
-hackerNewsApi.getTopStoryIds = () => client.get(`/topstories/${JSON_QUERY}`)
-hackerNewsApi.getStory = id => client.get(`item/${id}/${JSON_QUERY}`)
-hackerNewsApi.getStoriesByPage = (ids, page) => {
-  const { begin, end } = getPageSlice(PAGE_LIMIT, page)
-  const activeIds = getPageValues({ begin, end, items: ids })
-  const storyPromises = activeIds.map(id => hackerNewsApi.getStory(id))
-  return Promise.all(storyPromises)
+// Default API will be your root
+const API_ROOT = process.env.URL || 'http://localhost:3000/'
+const TIMEOUT = 20000
+const HEADERS = {
+  'Content-Type': 'application/json',
+  Accept: 'application/json'
 }
 
-export default hackerNewsApi
+class ApiService {
+  constructor({
+    baseURL = API_ROOT,
+    timeout = TIMEOUT,
+    headers = HEADERS,
+    auth
+  }) {
+    const client = axios.create({
+      baseURL,
+      timeout,
+      headers,
+      auth
+    })
+
+    client.interceptors.response.use(this.handleSuccess, this.handleError)
+    this.client = client
+  }
+
+  handleSuccess(response) {
+    return response
+  }
+
+  handleError(error) {
+    return Promise.reject(error)
+  }
+
+  get(path) {
+    return this.client.get(path).then(response => response.data)
+  }
+
+  post(path, payload) {
+    return this.client.post(path, payload).then(response => response.data)
+  }
+
+  put(path, payload) {
+    return this.client.put(path, payload).then(response => response.data)
+  }
+
+  patch(path, payload) {
+    return this.client.patch(path, payload).then(response => response.data)
+  }
+
+  delete(path) {
+    return this.client.delete(path).then(response => response.data)
+  }
+}
+
+export default ApiService

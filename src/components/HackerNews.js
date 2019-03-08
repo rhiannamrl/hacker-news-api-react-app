@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { getCurrentStories } from '../store/reducers/reducer'
+import actions from '../store/reducers/actions'
 import { connect } from 'react-redux'
 
 class HackerNews extends Component {
   componentDidMount() {
-    if (this.props.getStories) return this.props.getStories()
+    this.props.fetchStories()
   }
   render() {
-    console.log(this.props)
+    console.log(this.props, 'PROPS')
     return (
       <div>
         <h1>stories go here</h1>
@@ -18,13 +18,16 @@ class HackerNews extends Component {
 
 const mapState = state => {
   return {
-    stories: state.stories
+    stories: state.story.stories,
+    page: state.story.page,
+    storyIds: state.story.storyIds,
+    isFetching: state.story.isFetching
   }
 }
 
 const mapDispatch = dispatch => {
   return {
-    getStories: () => dispatch(getCurrentStories())
+    fetchStories: () => dispatch(actions.fetchStoryIds())
   }
 }
 
