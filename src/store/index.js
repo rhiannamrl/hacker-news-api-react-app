@@ -6,4 +6,15 @@ export const rootReducer = combineReducers({
   stories
 })
 
-export default createStore(rootReducer, applyMiddleware(ThunkMiddleware))
+//if extra time set up local storage
+// store cart in localStorage to retrieve after refresh!
+/* store.subscribe(() => {
+  if (Object.keys(store.getState().user).length === 0) {
+    localStorage.setItem('reduxCart', JSON.stringify(store.getState().cart))
+  }
+}) */
+
+const store = createStore(rootReducer, applyMiddleware(ThunkMiddleware))
+
+export default store
+export * from './reducers/reducer'

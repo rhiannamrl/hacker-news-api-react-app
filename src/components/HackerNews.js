@@ -18,10 +18,10 @@ class HackerNews extends Component {
 
 const mapState = state => {
   return {
-    stories: state.story.stories,
-    page: state.story.page,
-    storyIds: state.story.storyIds,
-    isFetching: state.story.isFetching
+    stories: state.stories.stories,
+    page: state.stories.page,
+    storyIds: state.stories.storyIds,
+    isFetching: state.stories.isFetching
   }
 }
 
