@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export const GET_STORIES = 'GET_STORIES'
 
 export const getCurrentStories = stories => ({
@@ -5,34 +7,23 @@ export const getCurrentStories = stories => ({
   stories
 })
 
-// export const fetchLevelQuestions = levelId => {
-//   return async dispatch => {
-//     try {
-//       database
-//         .ref('levels/')
-//         .child(levelId)
-//         .once('value', snapshot => {
-//           const exists = snapshot.val() !== null
-//           if (exists) {
-//             let data = snapshot.val()
-//             const result = Object.keys(data)
-//               .map(el => data[el])
-//               .sort((a, b) => a.id - b.id)
-//             dispatch(getLevelQuestions(result))
-//           }
-//         })
-//         .catch(error => console.log(error))
-//     } catch (err) {
-//       console.error(err)
-//     }
-//   }
-// }
+export const fetchStories = stories => async dispatch => {
+  try {
+    const { data } = await axios.get(
+      ' https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
+    )
+    dispatch(getCurrentStories(data))
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
 
-// export const currentLevelQuestions = (state = [], action) => {
-//   switch (action.type) {
-//     case GET_CURRENT_LEVEL_QUESTIONS:
-//       return action.questions
-//     default:
-//       return state
-//   }
-// }
+export const currentStories = (state = [], action) => {
+  switch (action.type) {
+    case GET_STORIES:
+      return action.stories
+    default:
+      return state
+  }
+}
