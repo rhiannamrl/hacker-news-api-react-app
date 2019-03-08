@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import './css/landing.css'
+import '../css/landing.css'
 
 export default class Landing extends Component {
   render() {
     return (
-      <div>
-        <div>
+      <div id="root">
+        <div className="Top-blue-hero">
           <ul className="NavBar-menu">
             <div className="NavBar-section">
               <li className="NavBar-item">
@@ -45,13 +45,15 @@ export default class Landing extends Component {
           </div>
         </div>
 
-        <div className="Policy-hero">
-          <div className="Container">
-            <div className="Policy-hero-wrapper">
-              <h1>
-                Our partners come in all shapes and sizes, just like our
-                policies
-              </h1>
+        <div>
+          <div className="Policy-hero">
+            <div className="Container">
+              <div className="Policy-hero-wrapper">
+                <h1>
+                  Our partners come in all shapes and sizes, just like our
+                  policies
+                </h1>
+              </div>
             </div>
           </div>
         </div>

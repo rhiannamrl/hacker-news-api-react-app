@@ -16,7 +16,6 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 body,
@@ -61,21 +60,14 @@ ul {
   max-width: 556px;
 }
 
-.Landing {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 /* Navbar */
 .Navbar-menu {
   display: flex;
   justify-content: space-between;
-  padding: 12px 3% 12px 3%;
 }
 
 .Navbar-section {
-  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   flex: 1 1 auto;
@@ -87,6 +79,12 @@ ul {
   padding-top: 0;
 }
 
+.Top-blue-hero {
+  background-image: url('../images/BlueBG.png');
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+}
 /*Policy Hero */
 
 .Policy-hero {
@@ -124,9 +122,9 @@ ul {
 
 .Contact-hero-form {
   align-items: center;
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  display: flex;
   margin-top: 40px;
 }
 
@@ -140,6 +138,7 @@ ul {
 
 .Contact-form-inputs {
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   display: flex;
   margin-left: 10px;
@@ -150,7 +149,7 @@ ul {
 input[type='text'] {
   font-size: 16px;
   color: #9ba9bb;
-  width: 75%;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   border-radius: 4px;
@@ -158,8 +157,9 @@ input[type='text'] {
 }
 
 .Contact-form-submit {
+  justify-content: center;
   align-items: center;
-  display: flex;
+  flex-direction: column;
   background: #ff7043;
   color: white;
   padding: 14px 20px;
