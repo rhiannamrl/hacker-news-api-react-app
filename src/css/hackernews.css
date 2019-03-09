@@ -14,11 +14,6 @@ body {
   padding: 0;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-}
-
 body,
 p,
 input,
@@ -64,24 +59,28 @@ ul {
 
 .Hacker-news {
   display: grid;
+  background-color: lightgray;
 }
 
 .Hacker-news h1 {
   text-align: center;
 }
 
+.Hacker-news h2 {
+  text-align: right;
+}
+
 section {
+  background-color: #ffffff;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 100px);
   grid-gap: 2rem;
+  border: 1px solid #039be5;
+  padding: 20px;
+  text-align: center;
 }
 
 section ul {
-  border: 1px solid #039be5;
   list-style: none;
-}
-
-section button {
-  justify-content: center;
 }

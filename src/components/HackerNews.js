@@ -18,10 +18,16 @@ class HackerNews extends Component {
       <div className="Hacker-news">
         <div className="Container">
           <h1>Hacker News</h1>
+          <h2>
+            <i class="far fa-star" />
+            Bookmarks
+          </h2>
           <section>
             {this.props.stories.map(story => (
               <ul key={story.id} {...story}>
-                <li>{story.title}</li>
+                <b>
+                  <li>{story.title}</li>
+                </b>
                 <li>author: {story.by}</li>
                 <li>score: {story.score}</li>
                 <li>
