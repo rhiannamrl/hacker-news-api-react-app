@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import '../css/landing.css'
 import SURElogo from '../images/SURElogo.png'
@@ -53,7 +54,9 @@ export default class Landing extends Component {
               <b>increase customer lifetime value</b> with integrated offers
               from top-tier insurance carriers.
             </h2>
-            <button>Get Started</button>
+            <Link to="/hacker-news">
+              <button>Get Started</button>
+            </Link>
           </div>
           <div className="Computer-Image">
             <img src={Computer} alt={'comp'} />

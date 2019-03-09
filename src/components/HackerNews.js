@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import actions from '../store/reducers/actions'
 import { connect } from 'react-redux'
+import '../css/hackernews.css'
 
 class HackerNews extends Component {
   constructor() {
@@ -14,16 +15,24 @@ class HackerNews extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>stories go here</h1>
-        {this.props.stories.map(story => (
-          <ul key={story.id} {...story}>
-            <li>{story.title}</li>
-            <li>{story.by}</li>
-            <li>{story.score}</li>
-            <button>bookmark</button>
-          </ul>
-        ))}
+      <div className="Hacker-news">
+        <div className="Container">
+          <h1>Hacker News</h1>
+          <section>
+            {this.props.stories.map(story => (
+              <ul key={story.id} {...story}>
+                <li>{story.title}</li>
+                <li>author: {story.by}</li>
+                <li>score: {story.score}</li>
+                <li>
+                  <button>
+                    <i class="far fa-star" />
+                  </button>
+                </li>
+              </ul>
+            ))}
+          </section>
+        </div>
       </div>
     )
   }
