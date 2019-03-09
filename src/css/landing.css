@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 html,
@@ -198,16 +198,36 @@ nav li {
   margin: 0 auto;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
 }
 
 .Policy-hero h1 {
-  padding: 15%;
+  text-align: center;
   justify-content: center;
   align-content: center;
   color: #ffffff;
-  width: 85%;
+  width: 100%;
+  padding: 20px 30px;
+  /* background-color: red; */
+}
+
+.Policy-Coverage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Policy-Coverage div {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: auto;
 }
 
 /* Contact Hero */
