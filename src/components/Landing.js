@@ -12,6 +12,11 @@ import Assurant from '../images/Assurant.png'
 import API from '../images/API.png'
 import iFrame from '../images/iFrame.png'
 import WhiteLabel from '../images/WhiteLabel.png'
+import Event from '../images/Event.png'
+import Property from '../images/Property.png'
+import Pet from '../images/Pet.png'
+import Home from '../images/Home.png'
+import Travel from '../images/Travel.png'
 
 export default class Landing extends Component {
   render() {
@@ -107,6 +112,43 @@ export default class Landing extends Component {
                 Our partners come in all shapes and sizes, just like our
                 policies
               </h1>
+              <div className="Policy-Coverage">
+                <div>
+                  <img src={Pet} alt={'pet'} />
+                  <body>
+                    <h4>PetCoverage</h4>
+                    Includes preventative, accident, and comprehensive
+                  </body>
+                </div>
+                <div>
+                  <img src={Travel} alt={'travel'} />
+                  <body>
+                    <h4>Travel Coverage</h4>
+                    Includes baggage, car, rental, leisure, and flight policies
+                  </body>
+                </div>
+                <div>
+                  <img src={Property} alt={'property'} />
+                  <body>
+                    <h4>Property Coverage</h4>
+                    Includes jewelry, collectibles, and smartphones policies
+                  </body>
+                </div>
+                <div>
+                  <img src={Event} alt={'event'} />
+                  <body>
+                    <h4>Catastrophic Event Coverage</h4>
+                    Includes wedding, and special events policies
+                  </body>
+                </div>
+                <div>
+                  <img src={Home} alt={'home'} />
+                  <body>
+                    <h4>Home Coverage</h4>
+                    Includes renters, eviction, and homeowners policies
+                  </body>
+                </div>
+              </div>
             </div>
           </div>
         </div>
