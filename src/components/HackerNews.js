@@ -8,7 +8,7 @@ class HackerNews extends Component {
   constructor() {
     super()
     this.state = {
-      bookmarks: ['test story', 'test story 2']
+      bookmarks: []
     }
   }
   componentDidMount() {
@@ -19,7 +19,12 @@ class HackerNews extends Component {
       <div className="Hacker-news">
         <div className="Container">
           <h1>Hacker News</h1>
-          <Link to={{ pathname: '/Bookmarks', state: { bookmarks: [] } }}>
+          <Link
+            to={{
+              pathname: '/Bookmarks',
+              state: { bookmarks: [this.state.bookmarks] }
+            }}
+          >
             <h3>
               <i class="far fa-star" />
               Bookmarks
@@ -28,16 +33,18 @@ class HackerNews extends Component {
           <section>
             {this.props.stories.map(story => (
               <ul key={story.id} {...story}>
-                <b>
-                  <li>{story.title}</li>
-                </b>
-                <li>author: {story.by}</li>
-                <li>score: {story.score}</li>
-                <li>
-                  <button>
-                    <i class="far fa-star" />
-                  </button>
-                </li>
+                <a href={story.url}>
+                  <b>
+                    <li>{story.title}</li>
+                  </b>
+                  <li>author: {story.by}</li>
+                  <li>score: {story.score}</li>
+                  <li>
+                    <button>
+                      <i class="far fa-star" />
+                    </button>
+                  </li>
+                </a>
               </ul>
             ))}
           </section>
