@@ -6,9 +6,9 @@ import ContactForm from './ContactForm.js/ContactForm.js'
 import Footer from './Footer/Footer.js'
 import Solutions from './Solutions/Solutions.js'
 import Partners from './Partners/Partners.js'
+import Navbar from './Navbar/Navbar.js'
 
 import '../css/landing.css'
-import SURElogo from '../images/SURElogo.png'
 import Computer from '../images/Computer.png'
 
 export default class Landing extends Component {
@@ -16,29 +16,7 @@ export default class Landing extends Component {
     return (
       <div>
         <div className="Top-blue-hero">
-          <nav>
-            <div>
-              <ul>
-                <li>
-                  <img src={SURElogo} alt={'logo'} />
-                </li>
-                <li>
-                  <span>Insurance</span>
-                  <i class="fas fa-caret-down" />
-                </li>
-                <li>Products</li>
-                <li>Support</li>
-                <li>Claims</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Download App</li>
-                <li>Login</li>
-                <li>Sign Up</li>
-              </ul>
-            </div>
-          </nav>
+          <Navbar />
           <div className="Get-started">
             <h1>Sure + You</h1>
             <h2>
