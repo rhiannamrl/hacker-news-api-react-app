@@ -17,13 +17,7 @@ class Navbar extends Component {
             </Link>
           </ul>
         </div>
-        <div>
-          <ul>
-            <Link to="/bookmarks">
-              <li>Bookmarks</li>
-            </Link>
-          </ul>
-        </div>
+        <div />
       </nav>
     )
   }

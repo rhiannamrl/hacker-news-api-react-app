@@ -110,7 +110,7 @@ class HackerNews extends Component {
                   <button
                     type="button"
                     onClick={
-                      !this.state.isBookmarked
+                      !this.state.bookmarks.includes(story.id)
                         ? () => this.addBookmark(story)
                         : () => this.deleteBookmark(story.id)
                     }
@@ -121,11 +121,6 @@ class HackerNews extends Component {
               </ul>
             ))}
           </section>
-          {/* <Bookmarks
-            bookmarks={this.bookmarks}
-            deleteBookmark={this.deleteBookmark}
-          /> */}
-          <section />
         </div>
       </div>
     )

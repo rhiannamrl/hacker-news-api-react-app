@@ -6,6 +6,7 @@ import './hackernews.css'
 class Bookmarks extends Component {
   render() {
     const { bookmarks } = this.props.location.state
+    console.log(this.props)
     return (
       <div className="Hacker-news">
         <Navbar />
