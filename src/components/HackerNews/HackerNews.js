@@ -1,20 +1,48 @@
 import React, { Component } from 'react'
-import actions from '../store/reducers/actions'
+import actions from '../../store/reducers/actions'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import '../css/hackernews.css'
+
+import './hackernews.css'
 
 class HackerNews extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       bookmarks: [],
       isBookmarked: false
     }
   }
+
   componentDidMount() {
     this.props.fetchStories()
   }
+
+  addBookmark(bookmark) {
+    const bookmarks = [...this.state.bookmarks]
+    bookmarks.push(bookmark)
+    this.setState(
+      {
+        bookmarks,
+        isBookmarked: true
+      },
+      function() {
+        console.log(this.state)
+      }
+    )
+    localStorage.setItem('bookmarks', JSON.stringify(this.state.bookmarks))
+    localStorage.setItem('isBookmarked', false)
+  }
+
+  deleteBookmark(id) {
+    const bookmarks = [...this.state.bookmarks]
+    const updatedBookmarks = bookmarks.filter(bookmark => bookmark.id !== id)
+
+    this.setState({ list: updatedBookmarks, isBookmarked: false })
+
+    localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks))
+  }
+
   render() {
     return (
       <div className="Hacker-news">
@@ -22,8 +50,11 @@ class HackerNews extends Component {
           <h1>Hacker News</h1>
           <Link
             to={{
-              pathname: '/Bookmarks',
-              state: { bookmarks: [this.state.bookmarks] }
+              pathname: '/bookmarks',
+              state: {
+                bookmarks: this.state.bookmarks,
+                isBookmarked: this.state.isBookmarked
+              }
             }}
           >
             <h3>
@@ -40,12 +71,19 @@ class HackerNews extends Component {
                   </b>
                   <li>author: {story.by}</li>
                   <li>score: {story.score}</li>
-                  <li>
-                    <button>
-                      <i class="far fa-star" />
-                    </button>
-                  </li>
                 </a>
+                <li>
+                  <button
+                    type="button"
+                    onClick={
+                      !this.state.isBookmarked
+                        ? () => this.addBookmark(story)
+                        : () => this.deleteBookmark(story.id)
+                    }
+                  >
+                    <i class="far fa-star" />
+                  </button>
+                </li>
               </ul>
             ))}
           </section>
