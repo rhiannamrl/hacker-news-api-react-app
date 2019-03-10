@@ -54,9 +54,8 @@ class HackerNews extends Component {
   }
 
 
-  handleChange(bookmark){
+  addBookmark(bookmark) {
     const bookmarks = [...this.state.bookmarks]
-    !bookmarks(bookmark.id) ?
     bookmarks.push(bookmark)
     this.setState(
       {
@@ -65,33 +64,15 @@ class HackerNews extends Component {
       },
       function() {
         console.log(this.state)
-      })
-      :
+      }
+    )
+  }
+  deleteBookmark(id) {
+    const bookmarks = [...this.state.bookmarks]
     const updatedBookmarks = bookmarks.filter(bookmark => bookmark.id !== id)
 
     this.setState({ list: updatedBookmarks })
-      
   }
-
-  // addBookmark(bookmark) {
-  //   const bookmarks = [...this.state.bookmarks]
-  //   bookmarks.push(bookmark)
-  //   this.setState(
-  //     {
-  //       bookmarks,
-  //       isBookmarked: true
-  //     },
-  //     function() {
-  //       console.log(this.state)
-  //     }
-  //   )
-  // }
-  // deleteBookmark(id) {
-  //   const bookmarks = [...this.state.bookmarks]
-  //   const updatedBookmarks = bookmarks.filter(bookmark => bookmark.id !== id)
-
-  //   this.setState({ list: updatedBookmarks })
-  // }
 
   render() {
     return (
