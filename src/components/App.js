@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Landing from './Landing'
-import HackerNews from './HackerNews'
-import Bookmarks from './Bookmarks'
+import HackerNews from './HackerNews/HackerNews'
+import Bookmarks from './HackerNews/Bookmarks'
 
 class App extends Component {
   render() {

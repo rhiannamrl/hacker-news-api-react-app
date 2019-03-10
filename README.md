@@ -43,10 +43,10 @@ Task 2:
 [x] The story author.
 [x] Each story should link to the submitted URL.
 [ ] Additionally, give the user a way to save/bookmark items with the following requirements:
-[ ] As a user, I can select a story to be bookmarked.
-[ ] As a user, I can view all my bookmarked stories.
+[x] As a user, I can select a story to be bookmarked.
+[x] As a user, I can view all my bookmarked stories.
 [ ] As a user, I can un-bookmark a bookmarked story.
-[ ] As a user, if I leave the page and return later, my bookmarks should persist.
+[x] As a user, if I leave the page and return later, my bookmarks should persist.
 
 ### Deployment
 

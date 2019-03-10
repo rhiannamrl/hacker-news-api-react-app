@@ -57,6 +57,39 @@ ul {
   max-width: 556px;
 }
 
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav li {
+  color: white;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-right: 20px;
+}
+
+@media only screen and (mmax-width: 600px) {
+  .nav div {
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+    opacity: 1;
+  }
+
+  /* .navNarrow i {
+    width: 100%;
+    float: right;
+    color: #039be5;
+  } */
+}
+
 .Hacker-news {
   display: grid;
   background-color: lightgray;
