@@ -1,0 +1,77 @@
+/* Desktop */
+
+@media screen and (min-width: 1024px) {
+  .Footer {
+    padding: 60px 20px;
+  }
+
+  .Footer > .Container {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .Footer-links {
+    align-items: center;
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    margin-right: 20px;
+  }
+
+  .Footer-links li {
+    margin: 0 20px 0 0;
+    text-align: left;
+  }
+
+  .Footer-social {
+    flex: 0 1 auto;
+    width: auto;
+  }
+
+  .Footer-social li {
+    margin: 0 20px 0 0;
+  }
+}
+
+/* Footer */
+.Footer {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.Footer > .Container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Footer-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Footer-links li {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.Footer-social {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.Footer-social li {
+  margin: 0 20px;
+}
+
+.Footer-logo {
+  height: 40px;
+  margin-bottom: 20px;
+}

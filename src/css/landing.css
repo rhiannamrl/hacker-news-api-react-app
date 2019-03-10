@@ -6,6 +6,7 @@
 html,
 body {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -79,13 +80,26 @@ nav li {
   margin-right: 20px;
 }
 
+@media only screen and (mmax-width: 600px) {
+  .nav {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  .nav li {
+    width: 100%;
+    float: none;
+  }
+}
+
 .Top-blue-hero {
   background-image: url('../images/BlueBG.png');
   background-position: top;
-  width: auto;
-  height: 1400px;
   background-repeat: no-repeat;
+  background-size: cover;
   vertical-align: center;
+  padding-top: 20px;
+  height: 800px;
+  /* background-color: red; */
 }
 
 .Computer-Image {
@@ -132,252 +146,4 @@ nav li {
   padding: 14px 20px;
   margin: 8px 0;
   cursor: pointer;
-}
-
-/*Partners*/
-.Partners {
-  background: #f6f9fc;
-  border: 1px solid #f2f4f7;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.Partners img {
-  height: 100%;
-}
-
-/* Solution */
-.Solution {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  vertical-align: center;
-}
-
-.Solution-header {
-  padding-top: 30px;
-  padding-left: 20%;
-  font-weight: 300;
-  width: 50%;
-  font-size: 20px;
-}
-
-.Solutions {
-  display: flex;
-  flex-direction: column;
-  padding-top: 3%;
-}
-
-.Solutions aside {
-  padding-left: 30%;
-  width: 70%;
-}
-
-.Solutions img {
-  width: 5%;
-}
-
-/*Policy Hero */
-
-.Policy-hero {
-  background-image: url('../images/BluePolicy.png');
-  background-position: bottom;
-  height: 100%;
-  height: 1200px;
-  background-repeat: no-repeat;
-  display: flex;
-}
-
-.Policy-hero-wrapper {
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
-
-.Policy-hero h1 {
-  text-align: center;
-  justify-content: center;
-  align-content: center;
-  color: #ffffff;
-  width: 100%;
-  padding: 20px 30px;
-  /* background-color: red; */
-}
-
-.Policy-Coverage {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.Policy-Coverage div {
-  background: #ffffff;
-  padding: 10px;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  margin: auto;
-}
-
-/* Contact Hero */
-.Contact-hero {
-  background-image: url('../images/SignUpImage.png');
-  background-size: 100%;
-  position: relative;
-  width: 100%;
-  mix-blend-mode: normal;
-  background-blend-mode: multiply;
-  opacity: 0.84;
-}
-
-.Contact-hero-wrapper {
-  margin: 0 auto;
-  max-width: 960px;
-  width: 100%;
-}
-
-.Contact-hero-form {
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
-  margin-top: 40px;
-}
-
-.Contact-hero-heading {
-  color: #ffffff;
-  font-size: 28px;
-  line-height: normal;
-  margin: 30px auto 10px;
-  text-align: center;
-}
-
-.Contact-form-inputs {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-  margin-left: 10px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  width: 500px;
-}
-
-.Contact-hero-wrapper form {
-  display: flex;
-  justify-content: center;
-}
-
-.Contact-form-inputs label {
-  width: 100%;
-}
-
-input[type='text'] {
-  font-size: 16px;
-  color: #9ba9bb;
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border-radius: 4px;
-  border: 1px solid #dadfe9;
-}
-
-.Contact-form-submit {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #ff7043;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* Footer */
-.Footer {
-  background-color: #fff;
-  padding: 40px 0;
-}
-
-.Footer > .Container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.Footer-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.Footer-links li {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.Footer-social {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-.Footer-social li {
-  margin: 0 20px;
-}
-
-.Footer-logo {
-  height: 40px;
-  margin-bottom: 20px;
-}
-/* Desktop */
-
-@media screen and (min-width: 1024px) {
-  .Footer {
-    padding: 60px 20px;
-  }
-
-  .Footer > .Container {
-    flex-direction: row;
-    padding: 0;
-  }
-
-  .Footer-links {
-    align-items: center;
-    display: flex;
-    flex: 0 1 auto;
-    justify-content: flex-start;
-    margin-right: 20px;
-  }
-
-  .Footer-links li {
-    margin: 0 20px 0 0;
-    text-align: left;
-  }
-
-  .Footer-social {
-    flex: 0 1 auto;
-    width: auto;
-  }
-
-  .Footer-social li {
-    margin: 0 20px 0 0;
-  }
 }
