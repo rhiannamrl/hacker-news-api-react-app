@@ -1,0 +1,50 @@
+/* Solution */
+.Solution {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  vertical-align: center;
+}
+
+.Solution-header {
+  padding-top: 30px;
+  padding-left: 20%;
+  font-weight: 300;
+  width: 50%;
+  font-size: 20px;
+}
+
+.Solutions {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3%;
+}
+
+.Solutions aside {
+  padding-left: 30%;
+  width: 70%;
+}
+
+.Solutions img {
+  width: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .Solution {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .Solution-header {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }
+  .Solutions aside {
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+  }
+}

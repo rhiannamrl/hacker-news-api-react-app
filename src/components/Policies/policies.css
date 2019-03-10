@@ -1,0 +1,72 @@
+/*Policy Hero */
+
+.Policy-hero {
+  background-image: url('./assets/BluePolicy.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 0;
+  height: 1400px;
+  display: flex;
+}
+
+.Policy-hero-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.Policy-hero h1 {
+  font-size: 26px;
+  margin: 0 auto 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.Policy-Coverage {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Policy-Coverage div {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.209352);
+  padding: 2.188rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex: inherit;
+  margin: 3% auto;
+}
+
+.Policy-Coverage body h4 {
+  text-align: left;
+  margin-bottom: 0.875rem;
+}
+
+@media screen and (max-width: 600px) {
+  .Policy-Coverage {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .Policy-Coverage div {
+    width: 95%;
+  }
+  .Policy-Coverage img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

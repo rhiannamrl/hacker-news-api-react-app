@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import actions from '../store/reducers/actions'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import '../css/hackernews.css'
 
 class HackerNews extends Component {
   constructor() {
     super()
     this.state = {
-      bookmarks: []
+      bookmarks: [],
+      isBookmarked: false
     }
   }
   componentDidMount() {
@@ -14,16 +17,39 @@ class HackerNews extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>stories go here</h1>
-        {this.props.stories.map(story => (
-          <ul key={story.id} {...story}>
-            <li>{story.title}</li>
-            <li>{story.by}</li>
-            <li>{story.score}</li>
-            <button>bookmark</button>
-          </ul>
-        ))}
+      <div className="Hacker-news">
+        <div className="Container">
+          <h1>Hacker News</h1>
+          <Link
+            to={{
+              pathname: '/Bookmarks',
+              state: { bookmarks: [this.state.bookmarks] }
+            }}
+          >
+            <h3>
+              <i class="far fa-star" />
+              Bookmarks
+            </h3>
+          </Link>
+          <section>
+            {this.props.stories.map(story => (
+              <ul key={story.id} {...story}>
+                <a href={story.url}>
+                  <b>
+                    <li>{story.title}</li>
+                  </b>
+                  <li>author: {story.by}</li>
+                  <li>score: {story.score}</li>
+                  <li>
+                    <button>
+                      <i class="far fa-star" />
+                    </button>
+                  </li>
+                </a>
+              </ul>
+            ))}
+          </section>
+        </div>
       </div>
     )
   }

@@ -1,0 +1,28 @@
+/*Partners*/
+
+.Partners-wrapper {
+  padding-top: 85px;
+}
+.Partners {
+  background: #f6f9fc;
+  border: 1px solid #f2f4f7;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Partners img {
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .Partners {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .Partners img {
+    padding: 10px;
+  }
+}
