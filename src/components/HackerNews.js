@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import actions from '../store/reducers/actions'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import '../css/hackernews.css'
 
 class HackerNews extends Component {
   constructor() {
     super()
     this.state = {
-      bookmarks: []
+      bookmarks: ['test story', 'test story 2']
     }
   }
   componentDidMount() {
@@ -18,10 +19,12 @@ class HackerNews extends Component {
       <div className="Hacker-news">
         <div className="Container">
           <h1>Hacker News</h1>
-          <h2>
-            <i class="far fa-star" />
-            Bookmarks
-          </h2>
+          <Link to={{ pathname: '/Bookmarks', state: { bookmarks: [] } }}>
+            <h3>
+              <i class="far fa-star" />
+              Bookmarks
+            </h3>
+          </Link>
           <section>
             {this.props.stories.map(story => (
               <ul key={story.id} {...story}>
