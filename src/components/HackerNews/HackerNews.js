@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import actions from '../../store/reducers/actions'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar.js'
 
 import './hackernews.css'
 
@@ -16,6 +17,40 @@ class HackerNews extends Component {
 
   componentDidMount() {
     this.props.fetchStories()
+    this.hydrateStateWithLocalStorage()
+
+    window.addEventListener(
+      'beforeunload',
+      this.saveStateToLocalStorage.bind(this)
+    )
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(
+      'beforeunload',
+      this.saveStateToLocalStorage.bind(this)
+    )
+    this.saveStateToLocalStorage()
+  }
+
+  hydrateStateWithLocalStorage() {
+    for (let key in this.state) {
+      if (localStorage.hasOwnProperty(key)) {
+        let value = localStorage.getItem(key)
+        try {
+          value = JSON.parse(value)
+          this.setState({ [key]: value })
+        } catch (e) {
+          this.setState({ [key]: value })
+        }
+      }
+    }
+  }
+
+  saveStateToLocalStorage() {
+    for (let key in this.state) {
+      localStorage.setItem(key, JSON.stringify(this.state[key]))
+    }
   }
 
   addBookmark(bookmark) {
@@ -30,22 +65,18 @@ class HackerNews extends Component {
         console.log(this.state)
       }
     )
-    localStorage.setItem('bookmarks', JSON.stringify(this.state.bookmarks))
-    localStorage.setItem('isBookmarked', false)
   }
-
   deleteBookmark(id) {
     const bookmarks = [...this.state.bookmarks]
     const updatedBookmarks = bookmarks.filter(bookmark => bookmark.id !== id)
 
-    this.setState({ list: updatedBookmarks, isBookmarked: false })
-
-    localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks))
+    this.setState({ list: updatedBookmarks })
   }
 
   render() {
     return (
       <div className="Hacker-news">
+        <Navbar />
         <div className="Container">
           <h1>Hacker News</h1>
           <Link
@@ -54,6 +85,9 @@ class HackerNews extends Component {
               state: {
                 bookmarks: this.state.bookmarks,
                 isBookmarked: this.state.isBookmarked
+              },
+              params: {
+                deleteBookmark: this.deleteBookmark
               }
             }}
           >
@@ -87,6 +121,11 @@ class HackerNews extends Component {
               </ul>
             ))}
           </section>
+          {/* <Bookmarks
+            bookmarks={this.bookmarks}
+            deleteBookmark={this.deleteBookmark}
+          /> */}
+          <section />
         </div>
       </div>
     )
