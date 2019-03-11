@@ -16,6 +16,12 @@ You will need the following installed:
 
 2. In the project directory: `npm install`
 
+3. Run tests using `npm test`
+
+4. Start your server using `npm start`
+
+5. Navigate to app in [browser](http://localhost:3000)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -28,12 +34,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### Deployment
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Deployment link: https://hacker-news-api-rhianna.herokuapp.com/
 
-### `npm test-react
+### Built with
+
+React
+Redux
+HTML
+CSS
+
+I used [create-react-app](https://goo.gl/26jfy4)
+to generate the scaffolding for this app.
 
 ### Requirements
 
@@ -62,14 +75,3 @@ Task 2:
 - [x] As a user, I can select a story to be bookmarked.
 - [x] As a user, I can view all my bookmarked stories.
 - [x] As a user, I can un-bookmark a bookmarked story. \*[x] As a user, if I leave the page and return later, my bookmarks should persist.
-
-### Deployment
-
-Deployment link:
-
-### Built with
-
-React
-Redux
-HTML
-CSS
