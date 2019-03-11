@@ -7,6 +7,7 @@ nav {
 nav ul {
   display: flex;
   list-style-type: none;
+  padding-left: 20px;
 }
 
 nav li {
@@ -16,17 +17,41 @@ nav li {
   margin-right: 20px;
 }
 
-@media only screen and (mmax-width: 600px) {
-  .nav div {
-    background-color: white;
-    width: 100%;
-    z-index: 1;
-    opacity: 1;
+.Mobile-logo {
+  display: none;
+}
+
+.Navbar__Link-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .Desktop-menu {
+    display: none;
   }
 
-  /* .navNarrow i {
-    width: 100%;
-    float: right;
-    color: #039be5;
-  } */
+  .Mobile-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .Mobile-logo {
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    padding-bottom: 20px;
+    padding-right: 40px;
+  }
+  .Navbar__ToggleShow {
+    display: flex;
+  }
+  .Navbar__Link-toggle {
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 30px;
+    padding-left: 90%;
+  }
 }
