@@ -2,6 +2,7 @@
 .Contact-hero {
   background-image: url('./assets/SignUpImage.png');
   background-size: 100%;
+  display: inline-block;
   position: relative;
   width: 100%;
   mix-blend-mode: normal;
