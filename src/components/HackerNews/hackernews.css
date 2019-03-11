@@ -40,6 +40,7 @@ img {
 
 a {
   color: #039be5;
+  text-decoration: none;
 }
 
 ul {
@@ -58,62 +59,83 @@ ul {
 }
 
 /* Navbar */
-nav {
+.Hacker-news-nav {
   display: flex;
   justify-content: space-between;
 }
 
-nav ul {
+.Hacker-news-nav ul {
   display: flex;
   list-style-type: none;
 }
 
-nav li {
+.Hacker-news-nav li {
   color: white;
   padding-bottom: 0;
   padding-top: 0;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
-@media only screen and (mmax-width: 600px) {
-  .nav div {
-    background-color: white;
-    width: 100%;
-    z-index: 1;
-    opacity: 1;
-  }
-
-  /* .navNarrow i {
-    width: 100%;
-    float: right;
-    color: #039be5;
-  } */
-}
+/* Hacker News */
 
 .Hacker-news {
-  display: grid;
   background-color: lightgray;
+}
+
+.row {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 50px;
 }
 
 .Hacker-news h1 {
   text-align: center;
 }
 
-.Hacker-news h3 {
-  text-align: right;
-}
-
-section {
-  background-color: #ffffff;
+.news-panel {
+  /* background-color: #ffffff; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 100px);
   grid-gap: 2rem;
-  border: 1px solid #039be5;
   padding: 20px;
+  padding-left: 50px;
   text-align: center;
+  justify-self: center;
 }
 
-section ul {
+.news-panel ul li {
   list-style: none;
+}
+
+.bookmarks-panel {
+  /* background-color: #ffffff; */
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding-right: 0px;
+  width: 70%;
+  border-radius: 6px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08), 0 5px 5px 0 rgba(0, 0, 0, 0.04);
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100%;
+}
+
+.bookmarks-container h3 {
+  text-align: center;
+  align-content: center;
+}
+
+.bookmarks-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bookmarks-container ul {
+  list-style: none;
+  text-align: center;
 }

@@ -4,14 +4,6 @@ import './navbar.css'
 import SURElogo from './assets/SURElogo.png'
 
 class Navbar extends Component {
-  burgerToggle() {
-    let linksEl = document.querySelector('.narrowLinks')
-    if (linksEl.style.display === 'block') {
-      linksEl.style.display = 'none'
-    } else {
-      linksEl.style.display = 'block'
-    }
-  }
   render() {
     return (
       <nav>

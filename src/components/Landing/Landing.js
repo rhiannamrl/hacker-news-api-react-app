@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import Policies from './Policies/Policies.js'
-import ContactForm from './ContactForm.js/ContactForm.js'
-import Footer from './Footer/Footer.js'
-import Solutions from './Solutions/Solutions.js'
-import Partners from './Partners/Partners.js'
-import Navbar from './Navbar/Navbar.js'
+import Policies from '../Policies/Policies.js'
+import ContactForm from '../ContactForm.js/ContactForm.js'
+import Footer from '../Footer/Footer.js'
+import Solutions from '../Solutions/Solutions.js'
+import Partners from '../Partners/Partners.js'
+import Navbar from '../Navbar/Navbar.js'
 
-import '../css/landing.css'
-import Computer from '../images/Computer.png'
+import './landing.css'
+import Computer from './assets/Computer.png'
 
 export default class Landing extends Component {
   render() {
