@@ -53,10 +53,10 @@ class HackerNews extends Component {
     }
   }
 
-
   addBookmark(bookmark) {
     const bookmarks = [...this.state.bookmarks]
     bookmarks.push(bookmark)
+
     this.setState(
       {
         bookmarks,
@@ -75,6 +75,9 @@ class HackerNews extends Component {
   }
 
   render() {
+    if (!this.state) {
+      return <h4>Loading...</h4>
+    }
     return (
       <div className="Hacker-news">
         <Navbar />
