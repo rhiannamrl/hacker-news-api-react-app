@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Sure Exam-Rhianna
 
 ## Getting Started
@@ -12,7 +10,7 @@ You will need the following installed:
 
 ### To install the project:
 
-1. `git clone https://github.com/rhiannamrl/sure-exam.git`
+1. `git clone https://github.com/rhiannamrl/hacker-news-api-react-app.git`
 
 2. In the project directory: `npm install`
 
