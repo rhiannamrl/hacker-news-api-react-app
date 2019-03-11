@@ -86,7 +86,7 @@ ul {
   display: inline-block;
 }
 
-.Hacker-news h1:hover {
+.Hacker-news li:hover {
   color: rgba(1, 108, 183, 1);
 }
 
@@ -163,4 +163,26 @@ ul {
 
 .bookmarks-container b:hover {
   color: rgba(1, 108, 183, 1);
+}
+
+@media only screen and (max-width: 600px) {
+  .Hacker-news {
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+  }
+  .news-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+  }
+
+  .bookmarks-panel {
+    width: 100%;
+    padding: 20px;
+  }
 }
