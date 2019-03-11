@@ -2,9 +2,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Sure Exam-Rhianna
 
-## Installation
+## Getting Started
 
-npm install
+### Prereqs
+
+You will need the following installed:
+
+- [npm, nodejs](https://nodejs.org/en/)
+
+### To install the project:
+
+1. `git clone https://github.com/rhiannamrl/sure-exam.git`
+
+2. In the project directory: `npm install`
 
 ## Available Scripts
 
@@ -27,30 +37,35 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### Requirements
 
+```
 Task 1:
-[ ] Use Figma (https://figma.com) to inspect the designs and accurately build the page.
-[x] This page should be the homepage of your app.
-[ ] The page should be responsive, supporting desktop, tablet, and mobile devices.
-[x] However, do link the Get Started call to action to Task 2 below
+```
 
+_[x] Use Figma (https://figma.com) to inspect the designs and accurately build the page.
+_[x] This page should be the homepage of your app.
+_[x] The page should be responsive, supporting desktop, tablet, and mobile devices.
+_[x] However, do link the Get Started call to action to Task 2 below
+
+```
 Task 2:
-[x] The Get Started CTA from Task 1 should navigate to our new Hacker News page at /hacker-news
-[x] The Hacker News page should be able to show the top 100 stories. Take UX into consideration in figuring out how to display this in the most user-friendly manner.
-[x] Display each story in a different layout from the current Hacker News design.
-[x] Each story should display at a minimum:
-[x] The story title.
-[x] The story score.
-[x] The story author.
-[x] Each story should link to the submitted URL.
-[ ] Additionally, give the user a way to save/bookmark items with the following requirements:
-[x] As a user, I can select a story to be bookmarked.
-[x] As a user, I can view all my bookmarked stories.
-[ ] As a user, I can un-bookmark a bookmarked story.
-[x] As a user, if I leave the page and return later, my bookmarks should persist.
+```
+
+_[x] The Get Started CTA from Task 1 should navigate to our new Hacker News page at /hacker-news
+_[x] The Hacker News page should be able to show the top 100 stories. Take UX into consideration in figuring out how to display this in the most user-friendly manner.
+_[x] Display each story in a different layout from the current Hacker News design.
+_[x] Each story should display at a minimum:
+_[x] The story title.
+_[x] The story score.
+_[x] The story author.
+_[x] Each story should link to the submitted URL.
+_[ ] Additionally, give the user a way to save/bookmark items with the following requirements:
+_[x] As a user, I can select a story to be bookmarked.
+_[x] As a user, I can view all my bookmarked stories.
+_[x] As a user, I can un-bookmark a bookmarked story. \*[x] As a user, if I leave the page and return later, my bookmarks should persist.
 
 ### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Deployment link:
 
 ### Built with
 
