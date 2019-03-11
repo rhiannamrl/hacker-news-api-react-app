@@ -18,7 +18,7 @@ class Policies extends Component {
           </h1>
 
           <div className="Policy-Coverage">
-            <div>
+            <div className="Single-Policy">
               <img src={Pet} alt={'pet'} />
               <body>
                 <h4>PetCoverage</h4>
@@ -26,7 +26,7 @@ class Policies extends Component {
               </body>
             </div>
 
-            <div>
+            <div className="Single-Policy">
               <img src={Travel} alt={'travel'} />
               <body>
                 <h4>Travel Coverage</h4>
@@ -38,7 +38,7 @@ class Policies extends Component {
           </div>
 
           <div className="Policy-Coverage">
-            <div>
+            <div className="Single-Policy">
               <img src={Property} alt={'property'} />
               <body>
                 <h4>Property Coverage</h4>
@@ -46,7 +46,7 @@ class Policies extends Component {
               </body>
             </div>
 
-            <div>
+            <div className="Single-Policy">
               <img src={Event} alt={'event'} />
               <body>
                 <h4>Catastrophic Event Coverage</h4>
@@ -56,7 +56,7 @@ class Policies extends Component {
           </div>
 
           <div className="Policy-Coverage">
-            <div>
+            <div className="Single-Policy">
               <img src={Home} alt={'home'} />
               <body>
                 <h4>Home Coverage</h4>

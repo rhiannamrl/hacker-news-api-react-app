@@ -59,8 +59,7 @@ class HackerNews extends Component {
     bookmarks.push(bookmark)
 
     this.setState({
-      bookmarks,
-      isBookmarked: true
+      bookmarks
     })
   }
   deleteBookmark(id) {
@@ -70,6 +69,9 @@ class HackerNews extends Component {
   }
 
   render() {
+    if (this.props.isFetching) {
+      return <h1>Loading...</h1>
+    }
     return (
       <div className="Hacker-news">
         <HackerNavbar />
