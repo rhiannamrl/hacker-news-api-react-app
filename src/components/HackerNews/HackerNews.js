@@ -73,10 +73,6 @@ class HackerNews extends Component {
     return (
       <div className="Hacker-news">
         <HackerNavbar />
-        <h1>
-          <i class="far fa-newspaper" />
-          Hacker News
-        </h1>
         <div className="row">
           <div className="news-panel">
             {this.props.stories.map(story => (

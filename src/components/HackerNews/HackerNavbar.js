@@ -9,6 +9,12 @@ class HackerNavbar extends Component {
       <nav className="Hacker-news-nav">
         <div>
           <ul>
+            <li>
+              <h1>
+                <i class="far fa-newspaper" />
+                Hacker News
+              </h1>
+            </li>
             <Link to="/">
               <li>Home</li>
             </Link>
