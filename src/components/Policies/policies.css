@@ -36,16 +36,21 @@
 }
 
 .Policy-Coverage div {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  flex: inherit;
+  margin: 3% auto;
+}
+
+.Single-Policy {
   background: #ffffff;
   padding: 10px;
   border-radius: 4px;
   box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.209352);
   padding: 2.188rem;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  flex: inherit;
-  margin: 3% auto;
+  padding-left: 5%;
 }
 
 .Policy-Coverage body h4 {

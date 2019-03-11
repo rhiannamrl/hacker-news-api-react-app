@@ -70,7 +70,6 @@ ul {
   vertical-align: center;
   padding-top: 20px;
   height: 800px;
-  /* background-color: red; */
 }
 
 .Computer-Image {
@@ -117,4 +116,10 @@ ul {
   padding: 14px 20px;
   margin: 8px 0;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .Get-started h1 {
+    padding-top: 20px;
+  }
 }
