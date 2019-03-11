@@ -3,15 +3,18 @@ import { Link } from 'react-router-dom'
 
 import './hackernews.css'
 
-class Navbar extends Component {
+class HackerNavbar extends Component {
   render() {
     return (
-      <nav>
+      <nav className="Hacker-news-nav">
         <div>
           <ul>
-            <Link to="/hacker-news">
-              <li>Hacker News</li>
-            </Link>
+            <li>
+              <h1>
+                <i class="far fa-newspaper" />
+                Hacker News
+              </h1>
+            </li>
             <Link to="/">
               <li>Home</li>
             </Link>
@@ -23,4 +26,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar
+export default HackerNavbar

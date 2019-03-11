@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import actions from '../../store/reducers/actions'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import Navbar from './Navbar.js'
+import HackerNavbar from './HackerNavbar'
+import Bookmarks from './Bookmarks'
 
 import './hackernews.css'
 
@@ -10,9 +10,10 @@ class HackerNews extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      bookmarks: [],
-      isBookmarked: false
+      bookmarks: []
     }
+    this.deleteBookmark = this.deleteBookmark.bind(this)
+    this.addBookmark = this.addBookmark.bind(this)
   }
 
   componentDidMount() {
@@ -57,50 +58,23 @@ class HackerNews extends Component {
     const bookmarks = [...this.state.bookmarks]
     bookmarks.push(bookmark)
 
-    this.setState(
-      {
-        bookmarks,
-        isBookmarked: true
-      },
-      function() {
-        console.log(this.state)
-      }
-    )
+    this.setState({
+      bookmarks,
+      isBookmarked: true
+    })
   }
   deleteBookmark(id) {
-    const bookmarks = [...this.state.bookmarks]
-    const updatedBookmarks = bookmarks.filter(bookmark => bookmark.id !== id)
-
-    this.setState({ list: updatedBookmarks })
+    this.setState({
+      bookmarks: this.state.bookmarks.filter(bookmark => bookmark.id !== id)
+    })
   }
 
   render() {
-    if (!this.state) {
-      return <h4>Loading...</h4>
-    }
     return (
       <div className="Hacker-news">
-        <Navbar />
-        <div className="Container">
-          <h1>Hacker News</h1>
-          <Link
-            to={{
-              pathname: '/bookmarks',
-              state: {
-                bookmarks: this.state.bookmarks,
-                isBookmarked: this.state.isBookmarked
-              },
-              params: {
-                deleteBookmark: this.deleteBookmark
-              }
-            }}
-          >
-            <h3>
-              <i class="far fa-star" />
-              Bookmarks
-            </h3>
-          </Link>
-          <section>
+        <HackerNavbar />
+        <div className="row">
+          <div className="news-panel">
             {this.props.stories.map(story => (
               <ul key={story.id} {...story}>
                 <a href={story.url}>
@@ -111,20 +85,19 @@ class HackerNews extends Component {
                   <li>score: {story.score}</li>
                 </a>
                 <li>
-                  <button
-                    type="button"
-                    onClick={
-                      !this.state.bookmarks.includes(story.id)
-                        ? () => this.addBookmark(story)
-                        : () => this.deleteBookmark(story.id)
-                    }
-                  >
+                  <button type="button" onClick={() => this.addBookmark(story)}>
                     <i class="far fa-star" />
                   </button>
                 </li>
               </ul>
             ))}
-          </section>
+          </div>
+          <div className="bookmarks-panel">
+            <Bookmarks
+              bookmarks={this.state.bookmarks}
+              deleteBookmark={this.deleteBookmark}
+            />
+          </div>
         </div>
       </div>
     )

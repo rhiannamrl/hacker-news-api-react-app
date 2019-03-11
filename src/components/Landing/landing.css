@@ -63,7 +63,7 @@ ul {
 }
 
 .Top-blue-hero {
-  background-image: url('../images/BlueBG.png');
+  background-image: url('./assets/BlueBG.png');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
